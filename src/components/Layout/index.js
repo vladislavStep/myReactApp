@@ -1,12 +1,10 @@
-
-
 import style from './style.module.css';
 
 
-const Layout = ({ id, title, descr, urlBg, colorBg }) => {
-
-	const styleBg = urlBg ? { backgroundImage: `url(${urlBg})` } : { backgroundColor: `${colorBg}` }
-	console.log([style.desc, style.full].join(" "))
+const Layout = ({ id, title, urlBg, colorBg, children }) => {
+	const styleBg = {}
+	if (urlBg) { styleBg.backgroundImage = `url(${urlBg})` }
+	if (colorBg) { styleBg.backgroundColor = colorBg }
 	return (
 		<section className={style.root} id={id} style={styleBg} >
 			<div className={style.wrapper}>
@@ -16,7 +14,7 @@ const Layout = ({ id, title, descr, urlBg, colorBg }) => {
 						<span className={style.separator}></span>
 					</div>
 					<div className={[style.desc, style.full].join(" ")}>
-						<p>{descr}</p>
+						{children}
 					</div>
 				</article >
 			</div >
