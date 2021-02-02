@@ -4,17 +4,17 @@ import cn from 'classnames';
 
 import style from './style.module.css';
 
-const Menu = ({ onClickMenu }) => {
-	const handleClick = () => {
-		onClickMenu && onClickMenu(true);
-	}
+const Menu = () => {
+	// const handleClick = () => {
+	// 	onClickMenu && onClickMenu(true);
+	// }
 	return (
 		<div class={cn(style.menuContainer, style.active)}>
 			<div class={style.overlay} />
 			<div class={style.menuItems}>
 				<ul>
 					<li>
-						<a href="#welcome" onClick={handleClick}>
+						<a href="#welcome">
 							HOME
         				</a>
 					</li>

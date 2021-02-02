@@ -13,6 +13,7 @@ const PokemonCard = ({ name, img, id, type, values }) => {
 	const handleClick = () => {
 		setActive(!isActive);
 	}
+	// console.log(key);
 	return (
 		<div className={style.root} onClick={handleClick}>
 
