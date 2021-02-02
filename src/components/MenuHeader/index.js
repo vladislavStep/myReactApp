@@ -19,18 +19,6 @@ const MenuHeader = () => {
 			</>
 		)
 	}
-
-	// switch (page) {
-	// 	case 'nav':
-	// 		return <Navbar onClickMenu={handelChangePage} />
-
-	// 	case 'menu':
-	// 		return <Menu isActive />
-	// 	default:
-	// 		// return <Navbar onClickMenu={handelChangePage} />
-	// 		break;
-	// }
-
 };
 
 export default MenuHeader;

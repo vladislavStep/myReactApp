@@ -9,9 +9,9 @@ const Menu = () => {
 	// 	onClickMenu && onClickMenu(true);
 	// }
 	return (
-		<div class={cn(style.menuContainer, style.active)}>
-			<div class={style.overlay} />
-			<div class={style.menuItems}>
+		<div className={cn(style.menuContainer, style.active)}>
+			<div className={style.overlay} />
+			<div className={style.menuItems}>
 				<ul>
 					<li>
 						<a href="#welcome">
