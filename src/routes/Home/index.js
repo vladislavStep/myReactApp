@@ -160,7 +160,7 @@ const HomePage = ({ onChangePage }) => {
 				onClickButton={handleClickButton}
 			/>
 			<Layout
-				title="Game description"
+				title="Game"
 				id="game"
 				urlBg={ReactBg1}
 			>
@@ -170,7 +170,7 @@ const HomePage = ({ onChangePage }) => {
 
 			</Layout>
 			<Layout
-				title="Cards"
+				title="About"
 				id="about"
 				colorBg="#202736"
 			>
@@ -188,7 +188,7 @@ const HomePage = ({ onChangePage }) => {
 				</div>
 			</Layout>
 			<Layout
-				title="Third Layout"
+				title="Contact"
 				descr="Description Third Layout"
 				id="contact"
 				urlBg={ReactBg3}

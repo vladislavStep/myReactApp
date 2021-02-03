@@ -1,19 +1,11 @@
 
-import { React, useState } from 'react';
+
 import cn from "classnames";
 import style from './style.module.css';
 
-const Navbar = ({ onClickMenu }) => {
-	const [isActive, setActive] = useState(true);
-
+const Navbar = ({ isA, onClickMenu }) => {
 	const handleClick = () => {
-
-		if (isActive) {
-			setActive(false);
-		} else {
-			setActive(true);
-		}
-		onClickMenu && onClickMenu(!isActive);
+		onClickMenu && onClickMenu(!isA);
 	}
 
 	return (
@@ -23,7 +15,7 @@ const Navbar = ({ onClickMenu }) => {
 				<p className={style.brand}>
 					POKEMON GAME
     			</p>
-				<a className={cn(style.menuButton, !isActive ? style.active : style.deactive)} onClick={handleClick}>
+				<a className={cn(style.menuButton, isA ? style.active : style.deactive)} onClick={handleClick}>
 					<span />
 				</a>
 			</div>
