@@ -3,57 +3,26 @@ import { React, useState } from 'react';
 import Menu from '../Menu';
 import Navbar from '../Navbar';
 
-// const MENU = [
-// 	{
-// 		'href':'#welcome',
-// 		'descr':'HOME',
-// 		'fun':'hendleClick'
-// 	}, 
-// 	{
-// 		'href':'#game',
-// 		'descr':'GAME',
-// 		'fun':'hendleClick'
-// 	},
-// 	{
-// 		'href':'#about',
-// 		'descr':'ABOUT',
-// 		'fun':'hendleClick'
-// 	},
-// 	{
-// 		'href':'#contact',
-// 		'descr':'CONTACT',
-// 		'fun':'hendleClick'
-// 	}
-// ]
-const MenuHeader = () => {
-	const [isActive, setActive] = useState(false);
-	const handelChangeMenu = (isActive) => {
-		setActive(isActive);
+
+const MenuHeader = ({ bgActive }) => {
+	const [isOpen, setOpen] = useState(null);
+	const handelClickHumburg = () => {
+		setOpen(prevState => !prevState);
 	};
 	return (
 		<>
-			<Navbar
-				isA={isActive}
-				onClickMenu={handelChangeMenu}
-			/>
 			<Menu
-				isA={isActive}
-				onClickMenu={handelChangeMenu}
-			>
-				{/* <ul>
-					{
-						MENU.map((item) => {
-							return (	
-								<li>
-									<a href={item.href} onClick={}>
-										{item.descr}
-									</a>
-								</li>
-							);
-						})
-					}
-				</ul> */}
-			</Menu>
+				isOpen={isOpen}
+				onClickHumburg={handelClickHumburg}
+			/>
+
+			<Navbar
+				isOpen={isOpen}
+				bgActive={bgActive}
+				onClickHumburg={handelClickHumburg}
+			/>
+
+
 		</>
 	)
 
