@@ -7,12 +7,11 @@ import cardBackSide from './assets/card-back-side.jpg';
 
 
 
-const PokemonCard = ({ key, name, img, id, type, values, isActive, onClick }) => {
+const PokemonCard = ({ keyID, name, img, id, type, values, isActive, onClick }) => {
 
 	const handleClick = () => {
-		// console.log("isActive", isActive);
-		onClick && onClick(id);
-	}
+		onClick && onClick(keyID);
+	};
 
 	return (
 		<div className={style.root} onClick={handleClick}>
