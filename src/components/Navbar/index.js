@@ -3,10 +3,9 @@
 import cn from "classnames";
 import style from './style.module.css';
 
-const Navbar = ({ isOpen, bgActive , onClickHumburg }) => {
-	
-	return (
+const Navbar = ({ isOpen, bgActive, onClickHumburg }) => {
 
+	return (
 		<nav className={cn(style.navbar, {
 			[style.bgActive]: bgActive
 		})}>
