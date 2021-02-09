@@ -1,6 +1,6 @@
 // import style from './style.module.css';
 
-const NotFound = ({ onChangePage }) => {
+const NotFound = () => {
 	// const handleClick = () => {
 	// 	onChangePage && onChangePage('app');
 	// }
