@@ -2,7 +2,12 @@
 
 const AboutPage = ({ onChangePage }) => {
 
-	return <h1>About Page</h1>;
+	return (
+		<div>
+			<h1>This is About Page</h1>;
+		</div>
+
+	)
 
 };
 

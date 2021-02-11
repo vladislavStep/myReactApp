@@ -21,13 +21,19 @@
 	transition: 0.6s 0.05s;
 	transform: rotateY(180deg);
 }
-
-.root {
+.selected {
 	width: 268px;
 	height: 388px;
 	margin: 16px;
 	perspective: 1000px;
 }
+
+/* .root {
+	width: 268px;
+	height: 388px;
+	margin: 16px;
+	perspective: 1000px;
+} */
 /* TODO: This place where we should change :hover on .active */
 .pokemonCard.active {
 	animation: flipFront 1000ms 300ms forwards;
