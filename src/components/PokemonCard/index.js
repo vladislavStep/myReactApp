@@ -7,22 +7,22 @@ import cardBackSide from './assets/card-back-side.jpg';
 
 
 
-const PokemonCard = ({ keyID, name, img, id, type, values, isActive, isSelected, minimize, className, onClick }) => {
+const PokemonCard = ({ keyID, name, img, id, type, values, isActive, isSelected, minimize, className, onClick, possession }) => {
 
 	const handleClick = () => {
 		onClick && onClick(keyID);
 	};
-
+	// console.log("PokemonCard:", keyID, name, img, id, type, values, isActive, isSelected, minimize, className, onClick, possession);
 	return (
 
 		<div className={cn(className, style.pokemonCard, {
 			[style.active]: isActive
 		}, {
-			[style.selected]: !isSelected
+			[style.selected]: isSelected
 		})} onClick={handleClick}>
 			<div className={style.cardFront}>
 				<div className={cn(style.wrap, style.front)}>
-					<div className={cn(style.pokemon, style[type])}>
+					<div className={cn(style.pokemon, style[type], style[possession])}>
 						<div className={style.values}>
 							<div className={cn(style.count, style.top)}>{values.top}</div>
 							<div className={cn(style.count, style.right)}>{values.right}</div>

@@ -48,6 +48,7 @@ const StartPage = () => {
 		firebase.getPokemonSoket((Pokemon) => {
 			setPokemonState(Pokemon);
 		});
+		return () => firebase.offPokemonSoket();
 	}, []);
 
 	const handleClickAddPokemon = () => {
@@ -60,6 +61,8 @@ const StartPage = () => {
 			return Object.entries(prevState).reduce((acc, item) => {
 				if (item[0] === keyID) {
 					pokemonContext.onClickHandle(item);
+					item[1]['isSelected'] = true;
+
 				};
 				acc[item[0]] = item[1];
 				return acc;
@@ -88,7 +91,7 @@ const StartPage = () => {
 				<div className={cn(style.desc, style.full)}>
 					<div className={style.flex}>
 						{
-							Object.entries(Pokemon).map(([keyID, { name, img, id, type, values }]) => < PokemonCard
+							Object.entries(Pokemon).map(([keyID, { name, img, id, type, isSelected, values }]) => < PokemonCard
 								keyID={keyID}
 								name={name}
 								img={img}
@@ -97,6 +100,7 @@ const StartPage = () => {
 								values={values}
 								isActive={true}
 								minimize={false}
+								isSelected={isSelected}
 								onClick={handleClickCard}
 							/>
 							)
