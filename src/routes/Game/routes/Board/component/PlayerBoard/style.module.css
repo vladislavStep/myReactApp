@@ -1,0 +1,20 @@
+.cardBoard {
+	/* width: 100; */
+
+	max-height: 14.8vw;
+	max-width: 18vw;
+	margin-top: -7vw;
+}
+.card {
+	max-height: 14.8vw;
+	/* width: 100px; */
+	/* max-width: 18vw; */
+	/* margin-top: -6vw; */
+}
+.cardBoard:first-child {
+	margin-top: 0;
+}
+
+.cardBoard.selected {
+	margin-left: -40px;
+}

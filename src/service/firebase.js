@@ -27,6 +27,9 @@ class Firebase {
 			cb(snapshot.val());
 		})
 	}
+	offPokemonSoket = () => {
+		this.database.ref('pokemon').off();
+	}
 	getPokemonsOnce = async () => {
 		return await this.database.ref('pokemons').once('value').then(snapshot => snapshot.val());
 	}
